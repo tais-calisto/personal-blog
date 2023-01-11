@@ -5,7 +5,7 @@ import { Container } from './style';
 const PostCategory = ({ id }: { id: string }) => {
   const [categories, setCategories] = useState<{ name: any }[] | null>();
 
-  const getCategoryies = async () => {
+  const getCategories = async () => {
     const { data } = await supabase
       .from('Categories')
       .select('name')
@@ -14,7 +14,7 @@ const PostCategory = ({ id }: { id: string }) => {
   };
 
   useMemo(async () => {
-    const categories = await getCategoryies();
+    const categories = await getCategories();
     setCategories(categories);
   }, []);
 

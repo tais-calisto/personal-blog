@@ -6,6 +6,7 @@ import { GetStaticProps } from 'next';
 import { Categories, Posts } from '../utils/interfaces';
 import FeaturedPosts from '../components/FeaturedPosts';
 import Hero from '../components/Hero';
+import About from '../components/About';
 
 export default function Home({
   posts,
@@ -29,6 +30,7 @@ export default function Home({
         <Header data={categories} />
         <Hero />
         <FeaturedPosts posts={posts} />
+        <About />
       </HomeStyle>
     </>
   );
