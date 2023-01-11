@@ -20,15 +20,19 @@ const Post = ({
     <>
       <Header data={categories} />
       <Container>
-        <PostImage path={postData.image} />
-        <div>
+        <div className='image'>
+          <PostImage path={postData.image} />
+        </div>
+        <div className='info'>
           <PostCategory id={postData.category_id} />
           <PostDate date={postData.created_at} />
         </div>
-        <h1>{postData.title}</h1>
-        {postData.paragraphs.map((p, index) => (
-          <p key={index}>{p}</p>
-        ))}
+        <div className='content'>
+          <h1>{postData.title}</h1>
+          {postData.paragraphs.map((p, index) => (
+            <p key={index}>{p}</p>
+          ))}
+        </div>
       </Container>
     </>
   );
