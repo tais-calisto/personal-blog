@@ -2,7 +2,6 @@ import { Container } from './style';
 import avocado from '../../assets/avocado.svg';
 import Image from 'next/image';
 import { socialLinks } from '../../utils/socialLinks';
-import broccoli from '../../assets/broccoli.svg';
 
 const Footer = () => {
   return (

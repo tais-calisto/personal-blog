@@ -11,14 +11,14 @@ export const Container = styled.section`
 
   article {
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border-radius: 0.5rem;
   }
 
   article:first-child {
     grid-area: first;
     justify-self: center;
     background-color: ${({ theme }) => theme.colors.accentBackground};
-    border-radius: 0.5rem;
-
     img,
     .content {
       padding: 1.5rem;
@@ -34,6 +34,10 @@ export const Container = styled.section`
       border-radius: 2rem;
       width: 100%;
       height: 15rem;
+    }
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.pink};
     }
   }
   article:nth-child(2) {
@@ -52,11 +56,12 @@ export const Container = styled.section`
     display: flex;
     gap: 1.5rem;
     align-self: center;
+    padding: 1rem;
 
     .content {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.5rem;
     }
     .resume {
       display: none;
@@ -65,6 +70,10 @@ export const Container = styled.section`
       max-width: 143px;
       max-height: 103px;
       border-radius: 0.5rem;
+    }
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.accentBackground};
     }
   }
 `;

@@ -17,7 +17,7 @@ export const darkTheme = {
     text: '#EEEEEE',
     textSecondary: '#FEF2EF',
     textLight: '#B6B6B6',
-    pink: '#FFE1E1',
+    pink: '#4E373F',
     green: '#354B0B',
     shadow: 'rgba(0, 0, 0, 0.5)',
     accentBackground: '#242424',
