@@ -72,5 +72,15 @@ export const GlobalStyle = createGlobalStyle`
     object-fit: cover;
 
   }
+
+  .date {
+        padding: 0.25rem 0.5rem;
+        width: fit-content;
+        border-radius: 0.5rem;
+        background-color: ${({ theme }) => theme.colors.pink};
+        p {
+          color: ${({ theme }) => theme.colors.text};
+        }
+      }
   
 `;

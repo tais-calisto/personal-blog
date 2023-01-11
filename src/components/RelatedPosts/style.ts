@@ -1,32 +1,34 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  width: 50%;
-  margin: 6rem auto 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+export const Container = styled.div`
+  border-top: 2px solid ${({ theme }) => theme.colors.accentBackground};
+  h1 {
+    text-align: center;
+    padding: 2rem;
+  }
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
   .postContainer {
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    padding: 1rem;
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 0.5rem;
     border-radius: 0.5rem;
+    padding: 0.5rem;
     background-color: ${({ theme }) => theme.colors.accentBackground};
     &:hover {
       background-color: ${({ theme }) => theme.colors.pink};
     }
     .image {
       img {
-        border-radius: 0.5rem;
+        width: 5vw;
+        height: 10vh;
       }
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
     }
   }
 `;

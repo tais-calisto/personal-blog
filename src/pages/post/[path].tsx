@@ -7,6 +7,7 @@ import { Container } from '../../styles/postPage.style';
 import PostCategory from '../../components/PostCategory';
 import PostDate from '../../components/PostDate';
 import Footer from '../../components/Footer';
+import RelatedPosts from '../../components/RelatedPosts';
 
 const Post = ({
   post,
@@ -34,6 +35,7 @@ const Post = ({
             <p key={index}>{p}</p>
           ))}
         </div>
+        <RelatedPosts data={postData.category_id} />
       </Container>
       <Footer />
     </>
