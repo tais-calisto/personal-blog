@@ -7,7 +7,8 @@ export interface Posts {
   created_at: string;
   title: string;
   resume: string;
-  content: string;
+  paragraphs: Array<string>;
   category_id: string;
   image: string;
+  path: string;
 }
