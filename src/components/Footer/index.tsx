@@ -1,12 +1,16 @@
 import { Container } from './style';
 import avocado from '../../assets/avocado.svg';
+import avocadoDark from '../../assets/avocado-dark.svg';
 import Image from 'next/image';
 import { socialLinks } from '../../utils/socialLinks';
+import useGetImageTheme from '../hooks/useGetTheme';
 
 const Footer = () => {
+  const img = useGetImageTheme(avocado, avocadoDark);
+
   return (
     <Container>
-      <Image src={avocado} alt='' />
+      <Image src={img} alt='' />
       <div className='content'>
         <div className='logo'>
           <p>E as proteínas?</p>

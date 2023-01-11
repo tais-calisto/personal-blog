@@ -1,4 +1,5 @@
 export const lightTheme = {
+  name: 'lightTheme',
   colors: {
     background: '#EEEEEE',
     text: '#1E1E1E',
@@ -12,12 +13,13 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
+  name: 'darkTheme',
   colors: {
     background: '#101010',
     text: '#EEEEEE',
     textSecondary: '#FEF2EF',
     textLight: '#B6B6B6',
-    pink: '#4E373F',
+    pink: '#6D4152',
     green: '#354B0B',
     shadow: 'rgba(0, 0, 0, 0.5)',
     accentBackground: '#242424',

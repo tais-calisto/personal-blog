@@ -70,6 +70,7 @@ export const GlobalStyle = createGlobalStyle`
 
   img{
     object-fit: cover;
+
   }
   
 `;
