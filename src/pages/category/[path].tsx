@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import { Container } from '../../styles/categoryPage.style';
 import PostImage from '../../components/PostImage';
 import PostDate from '../../components/PostDate';
+import Footer from '../../components/Footer';
 
 const Post = ({
   posts,
@@ -18,16 +19,21 @@ const Post = ({
       <Header data={categories} />
       <Container>
         {posts.map((p) => (
-          <div key={p.id}>
-            <PostImage path={p.image} />
+          <div key={p.id} className='postContainer'>
+            <div className='image'>
+              <PostImage path={p.image} />
+            </div>
             <div className='content'>
-              <PostDate date={p.created_at} />
               <h1>{p.title}</h1>
+              <div className='date'>
+                <PostDate date={p.created_at} />
+              </div>
               <p>{p.resume}</p>
             </div>
           </div>
         ))}
       </Container>
+      <Footer />
     </>
   );
 };

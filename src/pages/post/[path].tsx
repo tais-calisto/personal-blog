@@ -6,6 +6,7 @@ import PostImage from '../../components/PostImage';
 import { Container } from '../../styles/postPage.style';
 import PostCategory from '../../components/PostCategory';
 import PostDate from '../../components/PostDate';
+import Footer from '../../components/Footer';
 
 const Post = ({
   post,
@@ -34,6 +35,7 @@ const Post = ({
           ))}
         </div>
       </Container>
+      <Footer />
     </>
   );
 };
