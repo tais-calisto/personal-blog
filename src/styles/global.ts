@@ -64,7 +64,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  section{
+  section, footer{
     margin: 0 6rem
   }
 
