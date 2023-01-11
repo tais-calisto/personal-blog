@@ -41,7 +41,7 @@ export default function Home({
 export const getStaticProps: GetStaticProps = async (context) => {
   const { error: categoryError, data: categories } = await supabase
     .from('Categories')
-    .select('name');
+    .select();
 
   const { error: postsError, data: posts } = await supabase
     .from('Posts')

@@ -4,12 +4,14 @@ import { socialLinks } from '../../utils/socialLinks';
 import { ContentStyle } from './content.style';
 
 const Content = ({ data }: { data: Array<Categories> }) => {
+  console.log(data);
+
   return (
     <ContentStyle>
       <nav>
         <ul>
           {data.map((d, index) => (
-            <Link href={''} key={index}>
+            <Link href={`/category/${d.path}`} key={index}>
               {d.name}
             </Link>
           ))}

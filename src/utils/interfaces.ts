@@ -1,5 +1,6 @@
 export interface Categories {
   name: string;
+  path: string;
 }
 
 export interface Posts {

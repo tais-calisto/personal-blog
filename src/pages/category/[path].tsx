@@ -2,32 +2,32 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Categories, Posts } from '../../utils/interfaces';
 import supabase from '../api/supabase';
 import Header from '../../components/Header';
-import PostImage from '../../components/PostImage';
 import { Container } from './style';
-import PostCategory from '../../components/PostCategory';
+import PostImage from '../../components/PostImage';
 import PostDate from '../../components/PostDate';
 
 const Post = ({
-  post,
+  posts,
   categories,
 }: {
-  post: Array<Posts>;
+  posts: Array<Posts>;
   categories: Array<Categories>;
 }) => {
-  const postData = post[0];
+  console.log(posts);
 
   return (
     <>
       <Header data={categories} />
       <Container>
-        <PostImage path={postData.image} />
-        <div>
-          <PostCategory id={postData.category_id} />
-          <PostDate date={postData.created_at} />
-        </div>
-        <h1>{postData.title}</h1>
-        {postData.paragraphs.map((p) => (
-          <p>{p}</p>
+        {posts.map((p) => (
+          <div key={p.id}>
+            <PostImage path={p.image} />
+            <div className='content'>
+              <PostDate date={p.created_at} />
+              <h1>{p.title}</h1>
+              <p>{p.resume}</p>
+            </div>
+          </div>
         ))}
       </Container>
     </>
@@ -37,7 +37,7 @@ const Post = ({
 export default Post;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await supabase.from('Posts').select('path');
+  const { data } = await supabase.from('Categories').select('path');
 
   const paths = data!.map((d) => ({
     params: { path: d.path },
@@ -51,10 +51,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     .from('Categories')
     .select();
 
-  const { error: postsError, data: post } = await supabase
-    .from('Posts')
-    .select()
+  const { data: category } = await supabase
+    .from('Categories')
+    .select('id')
     .eq('path', params!.path);
 
-  return { props: { post, categories } };
+  const id = category![0].id;
+
+  const { error: postsError, data: posts } = await supabase
+    .from('Posts')
+    .select()
+    .eq('category_id', id);
+
+  return { props: { posts, categories } };
 };
