@@ -26,8 +26,8 @@ const Post = ({
           <PostDate date={postData.created_at} />
         </div>
         <h1>{postData.title}</h1>
-        {postData.paragraphs.map((p) => (
-          <p>{p}</p>
+        {postData.paragraphs.map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
       </Container>
     </>
