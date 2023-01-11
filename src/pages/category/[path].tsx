@@ -13,8 +13,6 @@ const Post = ({
   posts: Array<Posts>;
   categories: Array<Categories>;
 }) => {
-  console.log(posts);
-
   return (
     <>
       <Header data={categories} />

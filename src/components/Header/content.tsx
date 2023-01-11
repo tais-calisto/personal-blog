@@ -4,8 +4,6 @@ import { socialLinks } from '../../utils/socialLinks';
 import { ContentStyle } from './content.style';
 
 const Content = ({ data }: { data: Array<Categories> }) => {
-  console.log(data);
-
   return (
     <ContentStyle>
       <nav>
