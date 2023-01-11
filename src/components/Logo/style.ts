@@ -3,6 +3,13 @@ import '@fontsource/averia-gruesa-libre';
 
 export const LogoStyle = styled.div`
   width: 3rem;
+  cursor: pointer;
+
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    transform: rotate(-10deg);
+  }
 
   img {
     position: relative;
