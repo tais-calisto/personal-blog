@@ -7,6 +7,7 @@ import { Categories, Posts } from '../utils/interfaces';
 import FeaturedPosts from '../components/FeaturedPosts';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Footer from '../components/Footer';
 
 export default function Home({
   posts,
@@ -31,6 +32,7 @@ export default function Home({
         <Hero />
         <FeaturedPosts posts={posts} />
         <About />
+        <Footer />
       </HomeStyle>
     </>
   );

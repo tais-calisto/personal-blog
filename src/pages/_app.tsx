@@ -7,7 +7,9 @@ import { GlobalStyle } from '../styles/global';
 import { lightTheme, darkTheme } from '../styles/theme';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isDarkTheme, setDarkTheme] = useState(true);
+  const { matches } = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const [isDarkTheme, setDarkTheme] = useState(matches);
 
   const toggleTheme = () => {
     setDarkTheme(!isDarkTheme);
