@@ -35,7 +35,7 @@ const Post = ({
             <p key={index}>{p}</p>
           ))}
         </div>
-        <RelatedPosts data={postData.category_id} />
+        <RelatedPosts data={postData.category_id} path={postData.path} />
       </Container>
       <Footer />
     </>

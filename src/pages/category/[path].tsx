@@ -6,6 +6,7 @@ import { Container } from '../../styles/categoryPage.style';
 import PostImage from '../../components/PostImage';
 import PostDate from '../../components/PostDate';
 import Footer from '../../components/Footer';
+import { useRouter } from 'next/router';
 
 const Post = ({
   posts,
@@ -14,12 +15,21 @@ const Post = ({
   posts: Array<Posts>;
   categories: Array<Categories>;
 }) => {
+  const router = useRouter();
+  const goToPost = (path: string) => {
+    router.push(`/post/${path}`);
+  };
+
   return (
     <>
       <Header data={categories} />
       <Container>
         {posts.map((p) => (
-          <div key={p.id} className='postContainer'>
+          <div
+            key={p.id}
+            className='postContainer'
+            onClick={() => goToPost(p.path)}
+          >
             <div className='image'>
               <PostImage path={p.image} />
             </div>
