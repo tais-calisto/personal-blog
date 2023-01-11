@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import supabase from '../../pages/api/supabase';
+import { Container } from './style';
 
 const PostCategory = ({ id }: { id: string }) => {
   const [categories, setCategories] = useState<{ name: any }[] | null>();
@@ -18,11 +19,11 @@ const PostCategory = ({ id }: { id: string }) => {
   }, []);
 
   return (
-    <div>
+    <Container>
       {categories?.map((c, index) => (
         <p key={index}>{c.name}</p>
       ))}
-    </div>
+    </Container>
   );
 };
 

@@ -1,20 +1,23 @@
 import React from 'react';
+import { Container } from './style';
 
 const PostDate = ({ date }: { date: string }) => {
   const fullDate = new Date(date);
 
   const postDay = fullDate.getDate();
-  const postMonth = fullDate.getMonth() + 1;
+  let postMonth = fullDate.getMonth() + 1;
+
   const postYear = fullDate.getFullYear();
 
-  console.log(postMonth);
-
-  const postDate = `${postDay}/${postMonth}/${postYear}`;
+  const postDate =
+    postMonth < 10
+      ? `${postDay}/0${postMonth}/${postYear}`
+      : `${postDay}/${postMonth}/${postYear}`;
 
   return (
-    <div>
+    <Container>
       <p>{postDate}</p>
-    </div>
+    </Container>
   );
 };
 

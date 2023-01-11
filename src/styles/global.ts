@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
   }
 
-  h1, h2, p, a{
+  h1, h2, h3, p, a{
     color: ${({ theme }) => theme.colors.text};
 
   }
@@ -27,7 +27,12 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Averia Gruesa Libre", cursive;
   }
 
-  p, a{
+  h3{
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  h3, p, a{
     font-family: "Signika Negative", sans-serif;
   }
 
