@@ -3,7 +3,7 @@ import { Categories, Posts } from '../../utils/interfaces';
 import supabase from '../api/supabase';
 import Header from '../../components/Header';
 import PostImage from '../../components/PostImage';
-import { Container } from './style';
+import { Container } from '../../styles/postPage.style';
 import PostCategory from '../../components/PostCategory';
 import PostDate from '../../components/PostDate';
 

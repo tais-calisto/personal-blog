@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Categories, Posts } from '../../utils/interfaces';
 import supabase from '../api/supabase';
 import Header from '../../components/Header';
-import { Container } from './style';
+import { Container } from '../../styles/categoryPage.style';
 import PostImage from '../../components/PostImage';
 import PostDate from '../../components/PostDate';
 
