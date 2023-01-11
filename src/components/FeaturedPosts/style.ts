@@ -9,6 +9,10 @@ export const Container = styled.section`
   grid-template-areas: 'first second' 'first third' 'first fourt';
   column-gap: 1.5rem;
 
+  article {
+    cursor: pointer;
+  }
+
   article:first-child {
     grid-area: first;
     justify-self: center;
