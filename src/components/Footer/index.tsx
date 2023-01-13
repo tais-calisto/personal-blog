@@ -19,7 +19,9 @@ const Footer = () => {
         <ul>
           {socialLinks.map((sl, index) => (
             <li key={index}>
-              <a href={sl.link}>{<sl.icon />}</a>
+              <a href={sl.link} target='_blank' rel='noreferrer noopener'>
+                {<sl.icon />}
+              </a>
             </li>
           ))}
         </ul>
