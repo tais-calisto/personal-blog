@@ -21,8 +21,8 @@ const Header = ({ data }: { data: Array<Categories> }) => {
         <Content data={data} />
       </div>
       <div className='mobileContent'>
-        <div onClick={handleShowMenu}>
-          <IconMenu2 />
+        <div>
+          <IconMenu2 onClick={handleShowMenu} />
         </div>
         {showMenu ? (
           <div className='menuMobile'>

@@ -38,7 +38,7 @@ const Post = ({
               <div className='date'>
                 <PostDate date={p.created_at} />
               </div>
-              <p>{p.resume}</p>
+              <p className='resume'>{p.resume}</p>
             </div>
           </div>
         ))}

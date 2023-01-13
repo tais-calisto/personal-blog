@@ -24,4 +24,35 @@ export const Container = styled.footer`
       padding-bottom: 1rem;
     }
   }
+
+  @media screen and (max-width: 720px) {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 30%;
+      height: 30%;
+    }
+    .content {
+      text-align: end;
+      width: 70%;
+      ul {
+        justify-content: end;
+      }
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    .content {
+      width: 100%;
+      text-align: center;
+      ul {
+        justify-content: center;
+      }
+    }
+  }
 `;

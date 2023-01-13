@@ -31,4 +31,33 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 720px) {
+    .posts {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .postContainer {
+      gap: 1rem;
+      .image {
+        img {
+          width: 15vw;
+          height: 10vh;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .postContainer {
+      .image {
+        img {
+          width: 10vw;
+          height: 5vh;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 `;

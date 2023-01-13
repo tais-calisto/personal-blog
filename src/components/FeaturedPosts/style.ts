@@ -76,4 +76,62 @@ export const Container = styled.section`
       background-color: ${({ theme }) => theme.colors.accentBackground};
     }
   }
+
+  @media screen and (max-width: 720px) {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    article:first-child {
+      grid-area: first;
+      background-color: transparent;
+
+      img,
+      .content {
+        padding: 0;
+      }
+
+      .resume {
+        display: none;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    article:first-child,
+    article:nth-child(2),
+    article:nth-child(3),
+    article:nth-child(4) {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      align-self: flex-start;
+      width: 100%;
+      img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        align-self: center;
+      }
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.accentBackground};
+      }
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    article:first-child,
+    article:nth-child(2),
+    article:nth-child(3),
+    article:nth-child(4) {
+      img {
+        display: none;
+      }
+    }
+  }
 `;

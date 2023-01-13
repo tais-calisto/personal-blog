@@ -12,6 +12,8 @@ export const Container = styled.header`
 
   @media screen and (max-width: 720px) {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
 
     margin: 0.5rem 3rem;
 
@@ -24,6 +26,7 @@ export const Container = styled.header`
       text-align: end;
       position: relative;
       color: ${({ theme }) => theme.colors.text};
+      margin-right: 6rem;
     }
 
     .menuMobile {

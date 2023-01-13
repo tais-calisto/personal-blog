@@ -29,4 +29,27 @@ export const Container = styled.section`
       gap: 1rem;
     }
   }
+
+  @media screen and (max-width: 720px) {
+    width: 90%;
+    margin: 3rem auto 1rem;
+
+    .postContainer {
+      flex-direction: column;
+
+      .image {
+        img {
+          border-radius: 50%;
+        }
+      }
+      .content {
+        .resume {
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+  }
 `;

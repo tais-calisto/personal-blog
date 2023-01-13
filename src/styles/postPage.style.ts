@@ -32,4 +32,17 @@ export const Container = styled.section`
       text-align: justify;
     }
   }
+
+  @media screen and (max-width: 720px) {
+    margin: 3rem auto 1rem;
+    width: 80%;
+
+    .image {
+      img {
+        width: 100%;
+        border-radius: 0.5rem;
+        height: 20vh;
+      }
+    }
+  }
 `;

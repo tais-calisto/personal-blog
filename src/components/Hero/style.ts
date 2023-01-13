@@ -23,4 +23,23 @@ export const Container = styled.section`
       height: 100%;
     }
   }
+
+  @media screen and (max-width: 720px) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 520px) {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .image {
+      text-align: center;
+      img {
+        width: 60%;
+        height: 100%;
+      }
+    }
+  }
 `;
