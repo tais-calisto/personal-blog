@@ -3,13 +3,19 @@ import { Categories } from '../../utils/interfaces';
 import { socialLinks } from '../../utils/socialLinks';
 import { ContentStyle } from './content.style';
 
-const Content = ({ data }: { data: Array<Categories> }) => {
+const Content = ({
+  data,
+  onClick,
+}: {
+  data: Array<Categories>;
+  onClick: () => void;
+}) => {
   return (
     <ContentStyle>
       <nav>
         <ul>
           {data.map((d, index) => (
-            <Link href={`/category/${d.path}`} key={index}>
+            <Link href={`/category/${d.path}`} key={index} onClick={onClick}>
               {d.name}
             </Link>
           ))}

@@ -18,7 +18,7 @@ const Header = ({ data }: { data: Array<Categories> }) => {
         <Logo />
       </div>
       <div className='desktopContent'>
-        <Content data={data} />
+        <Content data={data} onClick={() => {}} />
       </div>
       <div className='mobileContent'>
         <div>
@@ -26,7 +26,7 @@ const Header = ({ data }: { data: Array<Categories> }) => {
         </div>
         {showMenu ? (
           <div className='menuMobile'>
-            <Content data={data} />
+            <Content data={data} onClick={handleShowMenu} />
           </div>
         ) : (
           <></>
